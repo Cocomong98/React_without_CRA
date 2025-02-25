@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>REACT APP WITHOUT CRA</title>
+        <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+    </head>
+
+    <body>
+        <div id="root"></div>
+        <!-- 실행되는 react 코드  -->
+        <script>
+            // App 실행시 동작할 내용 지정
+            /* 
+            첫 파라미터에 태그 지정 : h1 
+            두번째 파라미터에 props 지정 : 지금은 없음 
+            세번째 파라미터에 children 지정
+            */
+            const App = () => React.createElement("h1", null, "Hello React World");
+
+            // root에서 app컴포넌트를 렌더링하도록 설정
+            ReactDOM.render(React.createElement(App), document.getElementById("root"));
+        </script>
+    </body>
+</html>
