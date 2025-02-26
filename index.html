@@ -2,24 +2,34 @@
 <html>
     <head>
         <title>REACT APP WITHOUT CRA</title>
+        <!-- react 추가 -->
         <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
         <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+        <!-- babel 추가 -->
+        <!-- <script src="https://unpkg.com/@babel/standalone@7.26.9/babel.min.js"></script> -->
     </head>
 
     <body>
         <div id="root"></div>
         <!-- 실행되는 react 코드  -->
-        <script>
+        <script src="dist/app.js">
+            // cdn으로 react 적용 =======================================================================================
             // App 실행시 동작할 내용 지정
-            /* 
-            첫 파라미터에 태그 지정 : h1 
-            두번째 파라미터에 props 지정 : 지금은 없음 
+            /*
+            첫 파라미터에 태그 지정 : h1
+            두번째 파라미터에 props 지정 : 지금은 없음
             세번째 파라미터에 children 지정
             */
-            const App = () => React.createElement("h1", null, "Hello React World");
+            // const App = () => React.createElement("h1", null, "Hello React World");
 
             // root에서 app컴포넌트를 렌더링하도록 설정
-            ReactDOM.render(React.createElement(App), document.getElementById("root"));
+            // ReactDOM.render(React.createElement(App), document.getElementById("root"));
+
+            // babel 적용 =======================================================================================
+            // babel을 설치했으므로 JSX 문법으로 react 코드 작성가능
+            const App = () => <h1>HELLO REACT WORLD WITH JSX</h1>;
+            // root에서 App을 실행하도록 설정
+            ReactDOM.render(<App />, document.getElementById("root"));
         </script>
     </body>
 </html>
