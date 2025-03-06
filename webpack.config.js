@@ -4,7 +4,8 @@ module.exports = {
     entry: "./src/app.js",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "bundle.js",
+        // bundle파일에 해시값 추가
+        filename: "bundle.[hash].js",
     },
     module: {
         rules: [
@@ -17,4 +18,7 @@ module.exports = {
             },
         ],
     },
+    // mode: "production",
+    mode: "development",
+    plugins: [],
 };

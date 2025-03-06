@@ -25,6 +25,15 @@
 4. dist 폴더 삭제 후 gitignore에 dist 추가 후 build 
 
 ## 5강
+ 4강의 내용을 통해 여러개의 스크립트를 webpack로 통합하고 build해도 webpack 모드를 설정해야 한다는 경고문이 콘솔에 출력
+ 일반적으로 webpack의 옵션은 개발단계에서의 development / 운영단계에서의 production이 있음 (차이는 코드 최적화 과정의 유무)
+ 때문에 prodction 모드가 development 모드보다 조금 더 느리다
+
+ 이전까지 설치했던 패키지는 미설치 시 경고문구가 함께 출력되었기 때문에 설치의 의의를 알고 설치했음 
+ 그러나 플러그인의 경우, 그렇지 않기 때문에 스스로가 알아내야 함
+
+1. dist 폴더 삭제, config 파일의 output filename 수정 (번들 파일에 해시값 추가) 이후 build를 마치면 bundle 파일에 해시값이 붙음
+2. index.html의 script에도 번들 파일을 붙여줘야 정상적으로 실행됨 (소스코드 변동시마다 해시가 바뀌어 비효율적) -> 자동화 플러그인 필요 : html webpack plugin
 
 ## 6강
 
