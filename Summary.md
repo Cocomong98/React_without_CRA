@@ -33,7 +33,8 @@
  그러나 플러그인의 경우, 그렇지 않기 때문에 스스로가 알아내야 함
 
 1. dist 폴더 삭제, config 파일의 output filename 수정 (번들 파일에 해시값 추가) 이후 build를 마치면 bundle 파일에 해시값이 붙음
-2. index.html의 script에도 번들 파일을 붙여줘야 정상적으로 실행됨 (소스코드 변동시마다 해시가 바뀌어 비효율적) -> 자동화 플러그인 필요 : html webpack plugin
+2. index.html의 script에도 번들 파일을 붙여줘야 정상적으로 실행됨 (소스코드 변동시마다 해시가 바뀌어 비효율적) -> 자동화 플러그인 필요
+3. html webpack plugin 설치
 
 ## 6강
 
