@@ -21,5 +21,10 @@ module.exports = {
     },
     // mode: "production",
     mode: "development",
-    plugins: [],
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: "./index.html",
+            filename: "index.html",
+        }),
+    ],
 };
