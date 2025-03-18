@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
     entry: "./src/app.js",
@@ -22,9 +23,18 @@ module.exports = {
     // mode: "production",
     mode: "development",
     plugins: [
+        // 플러그인 배치시에는 순서가 중요함, 초기 설정과 연관된 플러그인들을 앞에 배치해야 함
+        new CleanWebpackPlugin(),
         new HtmlWebPackPlugin({
             template: "./index.html",
             filename: "index.html",
         }),
     ],
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "dist"),
+        },
+        port: 9000,
+        open: true,
+    },
 };
