@@ -41,4 +41,7 @@
  웹팩 활용
 
 ## 7강
- .
+ 5강에서 사용한 플러그인들에 더해, npm run build 할 때 사용되는 불필요한 과정들을 생략하도록 해주는 플러그인 설치
+
+1. clean-webpack-plugin, webpack-dev-server 설치
+2. package.json, webpack.config.js 등에서 수정 후 사용
